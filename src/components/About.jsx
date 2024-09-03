@@ -5,7 +5,7 @@ const About = () => {
   const [headerState, setHeaderState] = useState(0);
   return (
     <div className="flex w-full items-stretch h-full justify-between p-10 bg-[#363C43] rounded-[19px] shadow-[5px_5px_8px_3px_rgba(0,0,0,0.21)]">
-      <div className="min-h-full flex flex-col justify-between">
+      <div className="min-h-full hidden sm:flex flex-col justify-between ">
         <img src={img1} alt="" />
         <div className="flex flex-wrap w-8 gap-[2px]">
           <div className="bg-[#4A4E54] size-3 rounded-[4px]"></div>
@@ -18,23 +18,23 @@ const About = () => {
         <div className="size-8"></div>
       </div>
       <div className="flex flex-col items-center justify-between p-6 gap-5">
-        <div className="flex items-center justify-between w-full bg-[#171717] p-2 rounded-[23px] flex-wrap">
+        <div className="flex items-center justify-between w-full bg-[#171717] p-2 rounded-[23px] flex-wrap text-[15px] sm:text-[19px]">
           <button
-            className={`w-[195px] h-[59px] text-[19px] font-semibold grid place-content-center ${
+            className={`w-[195px] h-[59px] font-semibold grid place-content-center ${
               headerState === 0 && "bg-[#363C43]"
             } rounded-[16px] flex-1 min-w-[200px]`}
             onClick={() => setHeaderState(0)}>
             About Me
           </button>
           <button
-            className={`w-[195px] h-[59px] text-[19px] font-semibold grid place-content-center ${
+            className={`w-[195px] h-[59px] font-semibold grid place-content-center ${
               headerState === 1 && "bg-[#363C43]"
             } rounded-[16px] flex-1 min-w-[200px]`}
             onClick={() => setHeaderState(1)}>
             Experiences
           </button>
           <button
-            className={`w-[195px] h-[59px] text-[19px] font-semibold grid place-content-center ${
+            className={`w-[195px] h-[59px] font-semibold grid place-content-center ${
               headerState === 2 && "bg-[#363C43]"
             } rounded-[16px] flex-1 min-w-[200px]`}
             onClick={() => setHeaderState(2)}>
@@ -69,7 +69,7 @@ const About = () => {
           </p>
         )}
       </div>
-      <div className="bg-gradient-to-b from-[#888989] to-[#4A4E54] h-[64px] w-4 shadow-[2px_2px_4px_1px_rgba(0,0,0,0.43)] rounded-full self-center"></div>
+      <div className="hidden sm:block bg-gradient-to-b from-[#888989] to-[#4A4E54] h-[64px] w-4 shadow-[2px_2px_4px_1px_rgba(0,0,0,0.43)] rounded-full self-center"></div>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const Gallery = () => {
 
   return (
     <div className="flex w-full items-stretch h-full justify-between p-10 bg-[#363C43] rounded-[19px] shadow-[5px_5px_8px_3px_rgba(0,0,0,0.21)]">
-      <div className="min-h-full flex flex-col justify-between">
+      <div className="min-h-full hidden sm:flex flex-col justify-between">
         <img src={img1} alt="" />
         <div className="flex flex-wrap w-8 gap-[2px]">
           <div className="bg-[#4A4E54] size-3 rounded-[4px]"></div>
@@ -35,10 +35,10 @@ const Gallery = () => {
       </div>
       <div className="w-full flex flex-col gap-5">
         <div className="flex justify-between items-center w-full p-5 flex-wrap gap-5">
-          <span className="w-[149px] h-[62px] text-[19px] font-semibold grid place-content-center bg-black rounded-[19px]">
+          <span className="w-full sm:w-[149px] h-[62px] text-[19px] font-semibold grid place-content-center bg-black rounded-[19px]">
             Gallery
           </span>
-          <div className="flex gap-10 flex-wrap">
+          <div className="flex gap-10 flex-wrap sm:justify-start justify-center">
             <button
               className="box-shadow px-5 py-3 rounded-[19px]"
               onClick={() => fileInputRef.current.click()}>
